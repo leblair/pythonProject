@@ -6,6 +6,7 @@ def average(num1,num2):
 
 print("La seva mitjana aritmetica es:")
 average(num1,num2)"""
+import math
 
 """peus = float(input("Entra la primera distancia en peus:"))
 polzades = float(input("Entra la distancia en polzades:"))
@@ -62,7 +63,7 @@ alumne  = input("De quin alumne vols saber la nota? ")
 
 print("La seva nota es: ",map[alumne])"""
 
-set1 = {"hola","adios","noche","dia"}
+"""set1 = {"hola","adios","noche","dia"}
 set2 = {"good","bad","average","bland","noche"}
 inter = set1.intersection(set2)
 for s in inter:
@@ -78,5 +79,59 @@ for l in dif2:
 print()
 uni = set1.union(set2)
 for u in uni:
-    print(u)
+    print(u)"""
+
+"""int1 = int(input("Entra el primer nombre enter:"))
+int2 = int(input("Entra el segon nombre enter:"))
+def divExact(int1, int2):
+    if(int2==0):
+        print("No es pot dividir per 0")
+    res = int1%int2
+    if(res==0):
+        print("Divisio exacta, residu:", res)
+    else:
+        print("Divisio no exacta, residu", res)
+
+divExact(int1,int2)"""
+
+"""def areaTC():
+    option = int(input("Quina area vols calcular?\n1. Triangle\n2. Cercle\n"))
+    if(option==1):
+        base = float(input("Entra la base:"))
+        height = float(input("Entra l'altura:"))
+        print("L'area d'aquest triangle es: ", base*height/2)
+    elif(option==2):
+        radius = float(input("Entra el radi del cercle:"))
+        print("L'area d'aquest cercle es: " , math.pi*pow(radius,2))
+    else:
+        print("No es una opcio valida")
+areaTC()"""
+
+def splitEuros():
+    cant = int(input("Entra la quantitat d'euros:"))
+    cont = 0
+    fifty =0
+    twenty =0
+    ten =0
+    five =0
+    two =0
+    one =0
+    if(cant%50==0):
+        fifty=cant/50
+        print(fifty," Bitllets de 50€")
+    elif(cant%20==0):
+        twenty = cant/20
+    elif(cant%10==0):
+        ten = cant/10
+    elif(cant%5==0):
+        five = cant/5
+    elif(cant%2==0):
+        two = cant/2
+    elif(cant%1==0):
+        one = cant
+
+    for i in range(1,cant):
+        if(i==50):
+            cont+=1
+        elif(i==20):
 
