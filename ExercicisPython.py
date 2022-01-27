@@ -107,31 +107,76 @@ divExact(int1,int2)"""
         print("No es una opcio valida")
 areaTC()"""
 
+"""def printEuros(num,cant):
+    if(num>=5):
+        print("Billetes de ",num,"€: ", cant)
+    else:
+        print("Monedas de ",num,"€: ", cant)
 def splitEuros():
     cant = int(input("Entra la quantitat d'euros:"))
-    cont = 0
     fifty =0
     twenty =0
-    ten =0
+    ten = 0
     five =0
     two =0
-    one =0
-    if(cant%50==0):
-        fifty=cant/50
-        print(fifty," Bitllets de 50€")
-    elif(cant%20==0):
-        twenty = cant/20
-    elif(cant%10==0):
-        ten = cant/10
-    elif(cant%5==0):
-        five = cant/5
-    elif(cant%2==0):
-        two = cant/2
-    elif(cant%1==0):
-        one = cant
+    one =1
+    while cant>0:
+        if(cant>=50):
+            fifty = int(cant/50)
+            cant = cant- fifty*50
+            printEuros(50, fifty)
+        elif(cant>=20):
+            twenty = int(cant/20)
+            cant = cant- twenty*20
+            printEuros(20, twenty)
+        elif(cant>=10):
+            ten = int(cant/10)
+            cant = cant- ten*10
+            printEuros(10, ten)
+        elif(cant>=5):
+            five = int(cant/5)
+            cant = cant- five*5
+            printEuros(5, five)
+        elif(cant>=2):
+            two = int(cant/2)
+            cant = cant- two*2
+            printEuros(2, two)
+        else:
+            cant = cant-one
+            printEuros(1, one)
 
-    for i in range(1,cant):
-        if(i==50):
-            cont+=1
-        elif(i==20):
+splitEuros()"""
 
+"""isValid = False
+while(not isValid):
+    day = int(input("Entra el dia: "))
+
+    if(day<1 or day>31):
+        print("No es un dia valid, entra un dia valid:")
+    else:
+        mes = int(input("Entra el mes: "))
+        if mes<1 or mes >12 or (mes == 2 and day > 29) or ((mes == 4 or mes == 6 or mes == 9 or mes  ==11) and (day>30)) :
+            print("No es un mes valid, entra un mes valid")
+        else:
+            any = int(input("Entra el any: "))
+            if not(any%400==0 or (any%4==0 and any%100!=0)) and mes==2 and day>28:
+                print("No es una data valida, entra una data valida:")
+            else:
+                print(day, "-", mes, "-", any)
+                isValid = True"""
+
+def function13():
+
+    valid = False
+    varSum =0
+    while not valid:
+        nombre1 = int(input("Entra un nombre enter:"))
+        nombre2 = int(input("Entra un segon nombre enter:"))
+        if(nombre2<nombre1):
+            print("El segon nombre es més gran que el primer, entra un altre nombre")
+        else:
+            for i in range(nombre1,nombre2+1):
+                varSum +=i
+            print("La suma dels seus nombres es: ",varSum)
+            valid = True
+function13()
