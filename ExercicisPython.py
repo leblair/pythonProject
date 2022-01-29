@@ -164,7 +164,7 @@ while(not isValid):
             else:
                 print(day, "-", mes, "-", any)
                 isValid = True"""
-
+"""
 def function13():
 
     valid = False
@@ -179,4 +179,27 @@ def function13():
                 varSum +=i
             print("La suma dels seus nombres es: ",varSum)
             valid = True
-function13()
+function13()"""
+
+def function14():
+    valid = False
+    listFac = []
+    varFac =0
+    while not valid:
+        nFac = int(input("Entra un numero enter major que 0:"))
+        if nFac<=0:
+            print("No es un numero valid:")
+        else:
+            for a in range(1,nFac+1):
+                listFac.append(a)
+
+            for i in listFac:
+                if i==2:
+                    varFac +=(varFac+1)*i
+                else:
+                    varFac =varFac*i
+
+            print("El factorial de ",nFac, " es ", varFac)
+            valid = True
+
+function14()
