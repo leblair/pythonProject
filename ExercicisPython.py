@@ -181,7 +181,7 @@ def function13():
             valid = True
 function13()"""
 
-def function14():
+"""def function14():
     valid = False
     listFac = []
     varFac =0
@@ -202,4 +202,38 @@ def function14():
             print("El factorial de ",nFac, " es ", varFac)
             valid = True
 
-function14()
+function14()"""
+
+"""#Bucles  i comprehension
+def function24():
+    listMult2 = [num*2 for num in range(1,11)]
+    print("Els 10 primers multiples de 2 son: ",listMult2)
+function24()
+
+def function25():
+    n = int(input("Entra quants multiples vols:"))
+    m = int(input("De quin numero?:"))
+    listMult = [num*m for num in range(1,n+1)]
+    print("Els ", n, " primers multiples de ", m, " son", listMult)
+function25()"""
+
+
+def function28():
+    dic = dict.fromkeys(["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B","N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"])
+    cont = 0
+    boolean = False
+    dni = ""
+    for i in dic:
+        dic.update({i: cont})
+        cont += 1
+    while not boolean:
+        dni = input("Entra un DNI:")
+        if len(dni) != 9: print("DNI no valido")
+        else: boolean = True
+    numDni = int(dni[0:-1])
+    letra = dni[-1]
+    if numDni % 23 == dic.get(letra): print("Lletra del DNI correcte")
+    else: print("Lletra incorrecte")
+
+
+function28()
