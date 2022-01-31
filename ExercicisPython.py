@@ -217,7 +217,7 @@ def function25():
     print("Els ", n, " primers multiples de ", m, " son", listMult)
 function25()"""
 
-
+"""
 def function28():
     dic = dict.fromkeys(["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B","N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"])
     cont = 0
@@ -236,4 +236,17 @@ def function28():
     else: print("Lletra incorrecte")
 
 
-function28()
+function28()"""
+
+def function29():
+    o = open("functionFile.txt")
+    while 1:
+
+        char = o.read(1)
+        if not char:
+            break
+
+        print(char)
+
+    o.close()
+function29()
