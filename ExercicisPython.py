@@ -217,6 +217,27 @@ def function25():
     print("Els ", n, " primers multiples de ", m, " son", listMult)
 function25()"""
 
+"""def function26():
+        word = input("Escriu una paraula:").lower()
+        array = list(word)
+        array.sort()
+        newWord =""
+        newWord = newWord.join(array)
+        if newWord==word: print(word, " es una paraula alfabetica")
+        else: print(word, " no es una paraula alfabetica")
+function26()"""
+
+def function27():
+    chain = input("Escriu una cadena:").lower()
+    #ignorar espacios y ya
+    array = list(chain)
+    array.reverse()
+    newChain = ""
+    newChain = newChain.join(array)
+    if newChain == chain: print(chain,"\nEs una cadena palindroma")
+    else: print(chain, "\nNo es una cadena palindroma")
+function27()
+
 """
 def function28():
     dic = dict.fromkeys(["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B","N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"])
@@ -238,15 +259,12 @@ def function28():
 
 function28()"""
 
-def function29():
-    o = open("functionFile.txt")
-    while 1:
+"""def function29():
+    file = open("functionFile.txt", "r")
+    line = file.read().lower().split()
+    print("Contingut del fitxer:\n", line)
+    line = list(dict.fromkeys(line))
+    line.sort()
+    print("Paraules del fitxer ordenades sense repetits:\n",line)
 
-        char = o.read(1)
-        if not char:
-            break
-
-        print(char)
-
-    o.close()
-function29()
+function29()"""
