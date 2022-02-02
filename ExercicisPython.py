@@ -1,89 +1,90 @@
-"""num1 = float(input("Entra un nombre:"))
-num2 = float(input("Entra un segon nombre:"))
-
-def average(num1,num2):
-    print((num1+num2)/2)
-
-print("La seva mitjana aritmetica es:")
-average(num1,num2)"""
+def function1():
+    num1 = float(input("Entra un nombre:"))
+    num2 = float(input("Entra un segon nombre:"))
+    print((num1 + num2) / 2)
+    print("La seva mitjana aritmetica es:")
+function1()
 import math
 
-"""peus = float(input("Entra la primera distancia en peus:"))
-polzades = float(input("Entra la distancia en polzades:"))
+def function2():
 
-def distancia(peus,polzades):
+    peus = float(input("Entra la primera distancia en peus:"))
+    polzades = float(input("Entra la distancia en polzades:"))
+
     print("La primera distancia en cm es: ",peus*2.54*12)
     print("La segona distancia en cm es: ", polzades*2.54)
+function2()
 
-distancia(peus,polzades)"""
-
-"""cel = float(input("Entra la temperatura en Celsius: "))
-
-def celToFar(cel):
+def function3():
+    cel = float(input("Entra la temperatura en Celsius: "))
     print("La temperatura en Fahrenheit",1.8*cel+32)
 
-celToFar(cel)"""
+function3()
 
-"""sec = float(input("Entra la quantitat de segons: "))
+def function4():
 
-def castToMin(sec):
+    sec = float(input("Entra la quantitat de segons: "))
     min =int( sec/60)
     sleft = int(sec%60)
     print("Son ", min," minuts i ", sleft," segons")
 
-castToMin(sec)"""
+def function5():
+    listaVocals = ["a","e","i","o","u"]
 
-"""listaVocals = ["a","e","i","o","u"]
+    modificar = int(input("Quin numero de la llista vold modificar? "))
+    valor = input("Amb quin valor?")
 
-modificar = int(input("Quin numero de la llista vold modificar? "))
-valor = input("Amb quin valor?")
-
-def modList(lista,mod,valor):
-    lista[mod] = valor
-    for i in lista:
+    listaVocals[modificar] = valor
+    for i in listaVocals:
         print(i)
-modList(listaVocals,modificar,valor)
 
-lletra = input("Quina lletra de la llista vols modificar?")
-valor = input("Amb quin valor?")
-def modLet(lista,lletra,val):
-    lista[lista.index(lletra)] = valor
-    for i in lista:
+    lletra = input("Quina lletra de la llista vols modificar?")
+    valor2 = input("Amb quin valor?")
+    listaVocals[listaVocals.index(lletra)] = valor2
+    for i in listaVocals:
         print(i)
-modLet(listaVocals,lletra,valor)"""
+function5()
 
-"""multiples = [0,1,2,3,4,5,6,7,8,9,10]
-listR = [x*7 for x in multiples]
-for y in multiples:
-    print("7 x ",y, " = ", listR[y])
+def function6():
 
-map = {"Montse":0,"Bryan":10,"Oihane":5,"Raul":3}
+    multiples = [0,1,2,3,4,5,6,7,8,9,10]
+    listR = [x*7 for x in multiples]
+    for y in multiples:
+        print("7 x ",y, " = ", listR[y])
+function6()
 
-alumne  = input("De quin alumne vols saber la nota? ")
+def function7():
 
-print("La seva nota es: ",map[alumne])"""
+    map = {"Montse":0,"Bryan":10,"Oihane":5,"Raul":3}
 
-"""set1 = {"hola","adios","noche","dia"}
-set2 = {"good","bad","average","bland","noche"}
-inter = set1.intersection(set2)
-for s in inter:
-    print(s)
-print()
-dif1 = set1.difference(set2)
-for t in dif1:
-    print(t)
-print()
-dif2 = set2.difference(set1)
-for l in dif2:
-    print(l)
-print()
-uni = set1.union(set2)
-for u in uni:
-    print(u)"""
+    alumne  = input("De quin alumne vols saber la nota? ")
 
-"""int1 = int(input("Entra el primer nombre enter:"))
-int2 = int(input("Entra el segon nombre enter:"))
-def divExact(int1, int2):
+    print("La seva nota es: ",map[alumne])
+function7()
+
+def function8():
+    set1 = {"hola","adios","noche","dia"}
+    set2 = {"good","bad","average","bland","noche"}
+    inter = set1.intersection(set2)
+    for s in inter:
+        print(s)
+    print()
+    dif1 = set1.difference(set2)
+    for t in dif1:
+        print(t)
+    print()
+    dif2 = set2.difference(set1)
+    for l in dif2:
+        print(l)
+    print()
+    uni = set1.union(set2)
+    for u in uni:
+        print(u)
+function8()
+
+def function9():
+    int1 = int(input("Entra el primer nombre enter:"))
+    int2 = int(input("Entra el segon nombre enter:"))
     if(int2==0):
         print("No es pot dividir per 0")
     res = int1%int2
@@ -92,9 +93,9 @@ def divExact(int1, int2):
     else:
         print("Divisio no exacta, residu", res)
 
-divExact(int1,int2)"""
+function9()
 
-"""def areaTC():
+def function10():
     option = int(input("Quina area vols calcular?\n1. Triangle\n2. Cercle\n"))
     if(option==1):
         base = float(input("Entra la base:"))
@@ -105,14 +106,16 @@ divExact(int1,int2)"""
         print("L'area d'aquest cercle es: " , math.pi*pow(radius,2))
     else:
         print("No es una opcio valida")
-areaTC()"""
+function10()
 
-"""def printEuros(num,cant):
-    if(num>=5):
-        print("Billetes de ",num,"€: ", cant)
-    else:
-        print("Monedas de ",num,"€: ", cant)
-def splitEuros():
+def function11():
+
+    def printEuros(num,cant):
+        if(num>=5):
+            print("Billetes de ",num,"€: ", cant)
+        else:
+            print("Monedas de ",num,"€: ", cant)
+
     cant = int(input("Entra la quantitat d'euros:"))
     fifty =0
     twenty =0
@@ -145,26 +148,29 @@ def splitEuros():
             cant = cant-one
             printEuros(1, one)
 
-splitEuros()"""
+function11()
 
-"""isValid = False
-while(not isValid):
-    day = int(input("Entra el dia: "))
+def function12():
 
-    if(day<1 or day>31):
-        print("No es un dia valid, entra un dia valid:")
-    else:
-        mes = int(input("Entra el mes: "))
-        if mes<1 or mes >12 or (mes == 2 and day > 29) or ((mes == 4 or mes == 6 or mes == 9 or mes  ==11) and (day>30)) :
-            print("No es un mes valid, entra un mes valid")
+    isValid = False
+    while(not isValid):
+        day = int(input("Entra el dia: "))
+
+        if(day<1 or day>31):
+            print("No es un dia valid, entra un dia valid:")
         else:
-            any = int(input("Entra el any: "))
-            if not(any%400==0 or (any%4==0 and any%100!=0)) and mes==2 and day>28:
-                print("No es una data valida, entra una data valida:")
+            mes = int(input("Entra el mes: "))
+            if mes<1 or mes >12 or (mes == 2 and day > 29) or ((mes == 4 or mes == 6 or mes == 9 or mes  ==11) and (day>30)) :
+                print("No es un mes valid, entra un mes valid")
             else:
-                print(day, "-", mes, "-", any)
-                isValid = True"""
-"""
+                any = int(input("Entra el any: "))
+                if not(any%400==0 or (any%4==0 and any%100!=0)) and mes==2 and day>28:
+                    print("No es una data valida, entra una data valida:")
+                else:
+                    print(day, "-", mes, "-", any)
+                    isValid = True
+
+
 def function13():
 
     valid = False
@@ -179,9 +185,9 @@ def function13():
                 varSum +=i
             print("La suma dels seus nombres es: ",varSum)
             valid = True
-function13()"""
+function13()
 
-"""def function14():
+def function14():
     valid = False
     listFac = []
     varFac =0
@@ -202,8 +208,51 @@ function13()"""
             print("El factorial de ",nFac, " es ", varFac)
             valid = True
 
-function14()"""
+function14()
 
+def function15():
+    print("Multiples de 7 entre 0 i 100")
+    for i in range(0,100,7):
+        print(i)
+
+function15()
+
+def function16():
+    num = int(input("Quantes paraules vols?:"))
+    list = []
+    for i in range(1,num+1):
+        word = input("Escriu una paraula:")
+        list.append(word)
+
+    print(list)
+function16()
+
+def function17():
+    numllista1 = int(input("Llista 1\nQuantes paraules vols?:"))
+    list = []
+    for i in range(1, numllista1 + 1):
+        word = input("Escriu una paraula:")
+        list.append(word)
+    numllista2 = int(input("Llista 2\nQuantes paraules vols?:"))
+    list2 = []
+    for i in range(1, numllista2 + 1):
+        word = input("Escriu una paraula:")
+        list2.append(word)
+    for i in list:
+        if i in list2: list.remove(i)
+
+    print("Lista 1 sin palabras de lista 2:\n",list)
+function17()
+
+
+def function18():
+    num = int(input("Entra un numero:"))
+    for i in range(2, num):
+        if num % i == 0: return print(num, " no es un numero primer")
+    return print(num, " es un numero primer")
+
+
+function18()
 """#Bucles  i comprehension
 def function24():
     listMult2 = [num*2 for num in range(1,11)]
@@ -226,17 +275,21 @@ function25()"""
         if newWord==word: print(word, " es una paraula alfabetica")
         else: print(word, " no es una paraula alfabetica")
 function26()"""
-
+"""
 def function27():
     chain = input("Escriu una cadena:").lower()
-    #ignorar espacios y ya
-    array = list(chain)
-    array.reverse()
-    newChain = ""
-    newChain = newChain.join(array)
-    if newChain == chain: print(chain,"\nEs una cadena palindroma")
+    array = chain.split(' ')
+    arrayString =""
+    arrayString = arrayString.join(array)
+    list1 = list(arrayString)
+    array2 = chain.split(' ')
+    arrayString2 = ""
+    arrayString2 = arrayString2.join(array2)
+    list2 = list(arrayString2)
+    list2.reverse()
+    if list1 == list2: print(chain,"\nEs una cadena palindroma")
     else: print(chain, "\nNo es una cadena palindroma")
-function27()
+function27()"""
 
 """
 def function28():
