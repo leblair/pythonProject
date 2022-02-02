@@ -1,3 +1,5 @@
+#Bryan Amaguana 2WIAM M10
+
 def function1():
     num1 = float(input("Entra un nombre:"))
     num2 = float(input("Entra un segon nombre:"))
@@ -253,7 +255,76 @@ def function18():
 
 
 function18()
-"""#Bucles  i comprehension
+
+def function19():
+    print("Els numeros narcisistes fins el 1000 son:")
+    for i in range(153,1000):
+        x = int(i/100)
+        y = int((i/10) % 10)
+        z = i % 10
+        if i == (x * x * x + y * y * y + z * z * z):
+            print( i)
+
+function19()
+
+def function20():
+    bool = False
+    while not bool:
+        n1 = int(input("Entra el primer nombre:"))
+        n2 = int(input("Entra el segon nombre:"))
+        if n1>n2 : print("El primer nombre es mes gran que el primer, entra un valor menor")
+        else:
+            for i in range(n1,n2+1):
+                print(i)
+            bool = True
+function20()
+
+
+
+def function21():
+    bool = False
+    while not bool:
+        n1 = int(input("Entra el primer nombre:"))
+        n2 = int(input("Entra el segon nombre:"))
+        if n1 > n2:
+            print("El primer nombre es mes gran que el primer, entra un valor menor")
+        else:
+            for i in range(n2, n1-1, -1):
+                print(i)
+            bool = True
+function21()
+import math
+
+def function22():
+    bool = False
+    while not bool:
+        n1 = int(input("Entra el primer nombre:"))
+        n2 = int(input("Entra el segon nombre:"))
+        if n1 > n2:
+            print("El primer nombre es mes gran que el primer, entra un valor menor")
+        else:
+            print("Arrels quadrades entre ", n1, " i", n2)
+            for i in range(n1,n2+1):
+                print("Arrel quadrada de ",i ," = " ,math.sqrt(i))
+            bool = True
+function22()
+
+def function23():
+    bool = False
+    while not bool:
+        n1 = int(input("Entra el primer nombre:"))
+        n2 = int(input("Entra el segon nombre:"))
+        if n1 > n2:
+            print("El primer nombre es mes gran que el primer, entra un valor menor")
+        else:
+            print("Nombres parells entre ", n1, " i", n2)
+            for i in range(n1, n2 +1):
+                if i%2 ==0: print(i)
+            bool = True
+
+function23()
+
+#Bucles  i comprehension
 def function24():
     listMult2 = [num*2 for num in range(1,11)]
     print("Els 10 primers multiples de 2 son: ",listMult2)
@@ -264,9 +335,9 @@ def function25():
     m = int(input("De quin numero?:"))
     listMult = [num*m for num in range(1,n+1)]
     print("Els ", n, " primers multiples de ", m, " son", listMult)
-function25()"""
+function25()
 
-"""def function26():
+def function26():
         word = input("Escriu una paraula:").lower()
         array = list(word)
         array.sort()
@@ -274,8 +345,8 @@ function25()"""
         newWord = newWord.join(array)
         if newWord==word: print(word, " es una paraula alfabetica")
         else: print(word, " no es una paraula alfabetica")
-function26()"""
-"""
+function26()
+
 def function27():
     chain = input("Escriu una cadena:").lower()
     array = chain.split(' ')
@@ -289,9 +360,9 @@ def function27():
     list2.reverse()
     if list1 == list2: print(chain,"\nEs una cadena palindroma")
     else: print(chain, "\nNo es una cadena palindroma")
-function27()"""
+function27()
 
-"""
+
 def function28():
     dic = dict.fromkeys(["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B","N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"])
     cont = 0
@@ -310,9 +381,9 @@ def function28():
     else: print("Lletra incorrecte")
 
 
-function28()"""
+function28()
 
-"""def function29():
+def function29():
     file = open("functionFile.txt", "r")
     line = file.read().lower().split()
     print("Contingut del fitxer:\n", line)
@@ -320,4 +391,4 @@ function28()"""
     line.sort()
     print("Paraules del fitxer ordenades sense repetits:\n",line)
 
-function29()"""
+function29()
